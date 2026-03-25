@@ -1,0 +1,479 @@
+/* =========================================
+   VARIABLES
+   ========================================= */
+:root {
+  /* DU Custom Colors */
+  --fh-color-border: #D3D3D3;
+  --fh-color-bg-light: #F3FCFF;
+  --fh-color-bg-dark: #1D3A57;
+  --fh-color-bg-light-blue: #80cef0;
+  --fh-color-white: #FFFFFF;
+  --fh-color-gray: #a5a5a5;
+  --fh-color-green: rgba(183, 236, 203, 0.4);
+
+  /* Existing Lia Colors */
+  --lia-blue: 39, 92, 144;
+  --lia-blue-dark: 3, 81, 112;
+  --lia-blue-darker: 135, 180, 224;
+  
+  /* Swiper Pagination Colors */
+  --swiper-pagination-color: var(--fh-color-white) !important;
+  --swiper-pagination-bullet-inactive-color: var(--fh-color-gray) !important;
+  
+  /* Layout */
+  --fh-border-radius: 8px;
+}
+
+/* =========================================
+   GENERAL STYLING
+   ========================================= */
+h1, h2, h3, h4, h5 {
+  font-family: system-ui, sans-serif !important;
+}
+
+blockquote {
+  border-radius: var(--fh-border-radius);
+}
+
+.lia-quote {
+  background-color: var(--fh-color-green) !important;
+}
+
+/* =========================================
+   CUSTOM BLOCKS: Definition & Note
+   ========================================= */
+.definition {
+  background: #e6f7ff;
+  border-left: 6px solid #1890ff;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+}
+.definition::before {
+  content: "Definition";
+  font-weight: bold;
+  color: #1890ff;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.summary {
+  background: #fffbe6;
+  border-left: 6px solid #faad14;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+}
+.summary::before {
+  content: "Summary";
+  font-weight: bold;
+  color: #faad14;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.note {
+  background: #fffbe6;
+  border-left: 6px solid #faad14;
+  padding: 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+}
+.note::before {
+  content: "Note";
+  font-weight: bold;
+  color: #faad14;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Hide specific Liascript UI elements */
+div.lia-radio-group.lia-settings-theme-colors, 
+lia-settings-editor,
+li.nav__item.lia-support-menu__item.lia-support-menu__item--mode,
+li.nav__item.lia-support-menu__item.lia-support-menu__item--settings > div > hr:nth-child(4),
+.lia-notes,
+.lia-responsive-voice,
+.lia-effect__circle,
+.lia-support-menu__item.lia-support-menu__item--share {
+  display: none;
+}
+
+.lia-video-wrapper{
+  border-radius: var(--fh-border-radius);
+  overflow: hidden; 
+}
+
+/* =========================================
+   SWIPER
+   ========================================= */
+.mySwiper {
+  padding-bottom: 20px; 
+}
+
+.swiper-slide {
+  margin-bottom: 40px; 
+  border: 1px solid var(--fh-color-border);
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  background: var(--fh-color-bg-light);
+  border-radius: var(--fh-border-radius);
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto;
+}
+
+html.lia-variant-dark .swiper-slide {
+  color: var(--fh-color-white) !important;
+  background: var(--fh-color-bg-dark) !important;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  width: 30px !important;
+  height: 30px !important;
+  position: relative !important;
+}
+
+.swiper-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(var(--lia-blue));
+  border-radius: var(--fh-border-radius);
+  width: fit-content;
+  margin: 0 auto;
+  padding: 3px;
+}
+
+.swiper-controls .swiper-button-prev,
+.swiper-controls .swiper-button-next,
+.swiper-controls .swiper-pagination {
+  position: static !important;
+  margin: 0 !important;
+  width: auto !important;
+  transform: none !important;
+}
+
+.swiper-controls .swiper-button-prev,
+.swiper-controls .swiper-button-next {
+  color: var(--fh-color-white) !important;
+}
+
+.swiper-controls .swiper-pagination {
+  display: flex !important;
+  align-items: center;
+}
+
+/* =========================================
+   TABS
+   ========================================= */
+[role="tablist"] {
+  display: flex;
+  gap: 0; 
+  padding-left: 10px; 
+}
+
+[role="tab"] {
+  background: rgb(var(--color-background)) !important;
+  border: 1px solid var(--fh-color-border);
+  border-bottom: none;
+  border-radius: var(--fh-border-radius) var(--fh-border-radius) 0 0; 
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+  top: 1px; 
+}
+
+[role="tab"]:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+[role="tab"][aria-selected="true"] {
+  font-weight: 600;
+  border-top: 3px solid rgb(var(--color-highlight)); 
+  z-index: 1; 
+}
+
+[role="tabpanel"] {
+  border: 1px solid var(--fh-color-border);
+  padding: 20px;
+  border-radius: var(--fh-border-radius);
+}
+
+/* =========================================
+   QUOTES
+   ========================================= */
+.fhQuote {
+  color: rgb(var(--lia-blue)) !important;
+}
+
+.fhQuote::before,
+.fhQuote::after {
+  color: rgb(var(--color-highlight-dark));
+  font-size: 2.5rem;
+}
+
+.fhQuote::before {
+  content: "❝";
+  float: left;
+}
+
+.fhQuote::after {
+  content: "❝";
+  float: right;
+}
+
+.lia-quote {
+  border: 1px solid var(--fh-color-border);
+  background: var(--fh-color-bg-light);
+  color: rgb(var(--color-text)) !important;
+}
+
+/* Quote Dark Mode Overrides */
+html.lia-variant-dark .fhQuote,
+html.lia-variant-dark .lia-quote {
+  color: var(--fh-color-white) !important;
+  background: var(--fh-color-bg-dark) !important;
+}
+
+html.lia-variant-dark .fhQuote::before,
+html.lia-variant-dark .fhQuote::after {
+  color: var(--fh-color-white) !important;
+}
+
+/* =========================================
+   DYNAMIC WIDTH BLOCKQUOTES
+   ========================================= */
+blockquote, .lia-quote {
+  width: fit-content !important; /* Shrinks the box to hug the text */
+  max-width: 100% !important;    /* Prevents it from spilling off the screen if a line is too long */
+  
+  /* Centers the blockquote on the slide */
+  margin-left: auto !important;
+  margin-right: auto !important;
+  
+  /* Keeps the bottom spacing we set up earlier */
+  margin-bottom: 1.5em !important; 
+}
+
+/* =========================================
+   CALLOUTS / ADMONITIONS
+   ========================================= */
+.lia-effect__box {
+  border-radius: var(--fh-border-radius) !important;
+  border: 1px solid var(--fh-color-border);
+  border-left: 5px solid rgb(var(--lia-blue)) !important;
+  background: var(--fh-color-bg-light) !important;
+}
+
+html.lia-variant-dark .lia-effect__box {
+  background: var(--fh-color-bg-dark) !important;
+  border-color: rgba(255,255,255,0.1);
+}
+
+/* =========================================
+   TABLES
+   ========================================= */
+.lia-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: var(--fh-border-radius);
+  overflow: hidden; /* Keeps the rounded corners on the header */
+  border: 1px solid var(--fh-color-border);
+}
+
+.lia-table th {
+  background-color: var(--fh-color-green);
+  color: var(--fh-color-bg-dark);
+  padding: 12px;
+}
+
+html.lia-variant-dark .lia-table th {
+  background-color: rgb(var(--lia-blue-dark));
+  color: var(--fh-color-white);
+}
+
+.lia-table td {
+  padding: 10px;
+  border-bottom: 1px solid var(--fh-color-border);
+}
+
+/* =========================================
+   DYNAMIC TABLE WIDTH (HUGS CONTENT)
+   ========================================= */
+/* 1. The Wrapper (Handles centering and scrolling) */
+.lia-table-responsive {
+  width: fit-content !important; 
+  max-width: 100% !important;    
+  margin-left: auto !important;  
+  margin-right: auto !important; 
+  margin-bottom: 3rem !important;
+  display: block !important;
+  overflow-x: auto !important; /* Enables horizontal scrolling for huge tables */
+}
+
+/* 2. The Table Itself (Forces width to match content) */
+.lia-table {
+  width: max-content !important; /* Tells the table to size to its largest content */
+  border-collapse: collapse;
+  border-radius: var(--fh-border-radius);
+  border: 1px solid var(--fh-color-border);
+}
+
+/* 3. The Cells (Prevents text from breaking onto new lines) */
+.lia-table th, 
+.lia-table td {
+  white-space: wrap !important; /* Forces the column to be as wide as the text inside */
+  padding: 10px 15px !important;
+}
+
+/* =========================================
+   IMAGES (PREVENT UPSCALING)
+   ========================================= */
+img {
+  max-width: 80%;         /* Caps large images at 80% of the container */
+  height: auto;           /* Ensures the aspect ratio stays perfect */
+  display: block;         /* Required for centering */
+  margin: 0 auto;         /* Centers the image horizontally */
+  
+  /* Retaining your custom rounded corners and hover effect */
+  border-radius: var(--fh-border-radius); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+/* =========================================
+   VIDEOS
+   ========================================= */
+/* Target the wrapper and direct media elements */
+.lia-video-wrapper,
+figure.lia-figure iframe,
+figure.lia-figure video {
+  width: 80% !important;
+  max-width: 80% !important;
+  margin: 0 auto !important;
+  display: block !important; /* Required to force the margin-based centering */
+  
+  border-radius: var(--fh-border-radius) !important;
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode shadow adjustment */
+html.lia-variant-dark .lia-video-wrapper,
+html.lia-variant-dark figure.lia-figure iframe,
+html.lia-variant-dark figure.lia-figure video {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   SLIDE WIDTH OVERRIDE
+   ========================================= */
+@media screen and (min-width: 90em) {
+  .lia-canvas.lia-mode--slides .lia-slide {
+    max-width: none !important; 
+  }
+}
+
+.lia-slide__content {
+  max-width: 200rem !important; 
+}
+
+/* =========================================
+   TYPOGRAPHY MATCHING & SCALING
+   ========================================= */
+/* 1. Make all text match your title font */
+body, .lia-slide, p, li, span, a, div {
+  font-family: system-ui, sans-serif !important;
+}
+
+/* 2. Fluid scaling for Headings */
+h1 {
+  font-size: clamp(32px, 5vw, 64px) !important;
+  line-height: 1.2 !important;
+}
+
+h2 {
+  font-size: clamp(28px, 4vw, 48px) !important;
+  line-height: 1.25 !important;
+}
+
+h3 {
+  font-size: clamp(24px, 3vw, 40px) !important;
+  line-height: 1.3 !important;
+}
+
+h4 {
+  font-size: clamp(20px, 2.5vw, 32px) !important;
+}
+
+h5 {
+  font-size: clamp(18px, 2vw, 28px) !important;
+}
+
+/* 3. Fluid scaling for Body Text */
+p, li, .lia-slide {
+  font-size: clamp(18px, 2vw, 24px) !important;
+  line-height: 1.6 !important;
+}
+
+
+/* =========================================
+   ELEMENT SPACING & MARGINS
+   ========================================= */
+/* 1. Spacing around Headings */
+h1, h2, h3, h4, h5 {
+  margin-top: 1.5em !important;    /* Adds space above the title */
+  margin-bottom: 0.75em !important; /* Adds a slightly smaller space below */
+}
+
+/* Prevent the very first title on a slide from being pushed down too far */
+.lia-slide > h1:first-child,
+.lia-slide > h2:first-child,
+.lia-slide > div > h1:first-child,
+.lia-slide > div > h2:first-child {
+  margin-top: 0 !important;
+}
+
+/* 2. Spacing for Paragraphs, Lists, and Blockquotes */
+p, ul, ol, .lia-quote {
+  margin-bottom: 1.5em !important;
+}
+
+/* 3. Spacing between indivifhal list items */
+li {
+  margin-bottom: 0.5em !important;
+}
+
+/* =========================================
+   SIDE-BY-SIDE LAYOUT (COLUMNS)
+   ========================================= */
+.du-row {
+  display: flex;
+  gap: 30px; /* Space between the two objects */
+  align-items: flex-start; /* Aligns them at the top. Use 'center' if you want them middle-aligned */
+  flex-wrap: wrap; /* Allows them to stack on small mobile screens */
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+/* Forces the items inside the row to share the space equally */
+.du-row > * {
+  flex: 1 1 0; /* Grow and shrink equally */
+  min-width: 300px; /* If the screen is too small to fit 300px columns, they will stack */
+  
+  /* Overrides our previous global width/margin rules so they fit perfectly in the column */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important; 
+}
