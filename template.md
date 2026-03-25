@@ -4,7 +4,7 @@ version:    0.0.1
 
 comment:    MASKOR template for micromodules.
 
-link:       
+link:       https://raw.githubusercontent.com/MASKOR/LiascriptTemplate/refs/heads/main/maskor-style.css
 
 link:       https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css
 
