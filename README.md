@@ -143,7 +143,38 @@ var swiper = new Swiper(".mySwiper", {
 @duQuote: <!-- class="lia-quote__text duQuote" -->
 -->
 
-# Swiper
+
+# Custom CSS Classes
+
+The following custom CSS classes are defined in `maskor-style.css` and can be used to style your Liascript content:
+
+| Class/Selector         | Description |
+|------------------------|-------------|
+| `.definition`          | Highlighted block for definitions, blue border and label. |
+| `.summary`             | Highlighted block for summaries, yellow border and label. |
+| `.note`                | Highlighted block for notes, yellow border and label. |
+| `.lia-quote`           | Custom quote styling, green background in light mode, dark in dark mode. |
+| `.fhQuote`             | Large stylized quote marks before/after, blue text. |
+| `.mySwiper`            | Swiper container with custom padding. |
+| `.swiper-slide`        | Swiper slide styling: border, background, padding, rounded corners. |
+| `.swiper-controls`     | Flexbox container for Swiper navigation and pagination. |
+| `.swiper-button-next`,<br>`.swiper-button-prev` | Custom size and color for Swiper navigation buttons. |
+| `.tabs`                | Container for tabbed content. |
+| `[role="tablist"]`    | Flexbox for tab headers. |
+| `[role="tab"]`        | Tab button styling, border, background, selected state. |
+| `[role="tabpanel"]`   | Panel styling for tab content. |
+| `.lia-effect__box`     | Callout/admonition box with colored border. |
+| `.lia-table`           | Table styling: border, background, header color. |
+| `.lia-table-responsive`| Responsive wrapper for tables, enables horizontal scrolling. |
+| `img`                  | Images: max width, rounded corners, hover effect. |
+| `.lia-video-wrapper`   | Video wrapper: rounded corners, shadow, centering. |
+| `.du-row`              | Flexbox row for side-by-side columns. |
+| `.du-row > *`          | Column children: equal width, responsive stacking. |
+
+**Variables:**
+The CSS uses many custom properties (variables) for colors, border radius, etc. See `:root` in `maskor-style.css` for details.
+
+<!-- # Swiper
 
 <div class="swiper mySwiper">
 <div class="swiper-wrapper">
@@ -236,4 +267,4 @@ tabs.forEach(tab => {
 @duQuote
 > Eine erste Zeile.
 > 
-> Eine zweite Zeile.
+> Eine zweite Zeile. -->
