@@ -259,8 +259,7 @@ blockquote, .lia-quote {
   margin-left: auto !important;
   margin-right: auto !important;
   
-  /* Keeps the bottom spacing we set up earlier */
-  margin-bottom: 1.5em !important; 
+  /* margin-bottom: 0.5em !important;  */
 }
 
 /* =========================================
@@ -445,8 +444,8 @@ h1, h2, h3, h4, h5 {
   margin-top: 0 !important;
 }
 
-/* 2. Spacing for Paragraphs, Lists, and Blockquotes */
-p, ul, ol, .lia-quote {
+/* 2. Spacing for Paragraphs, Lists */
+p, ul, ol{
   margin-bottom: 1.5em !important;
 }
 
@@ -476,4 +475,19 @@ li {
   margin-left: 0 !important;
   margin-right: 0 !important;
   max-width: 100% !important; 
+}
+
+blockquote, .lia-quote {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important; 
+}
+
+blockquote > *:last-child,
+.lia-quote > *:last-child {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.fhQuote::after {
+  line-height: 0.5; 
 }
