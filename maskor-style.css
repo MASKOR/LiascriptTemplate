@@ -10,6 +10,7 @@
   --fh-color-white: #FFFFFF;
   --fh-color-gray: #a5a5a5;
   --fh-color-green: rgba(183, 236, 203, 0.4);
+  --fh-color-green-dark: rgba(0, 85, 85, 0.4);
 
   /* Existing Lia Colors */
   --lia-blue: 39, 92, 144;
@@ -28,7 +29,7 @@
    GENERAL STYLING
    ========================================= */
 h1, h2, h3, h4, h5 {
-  font-family: system-ui, sans-serif !important;
+  font-family: system-ui, sans-serif, icon !important;
 }
 
 blockquote {
@@ -238,9 +239,21 @@ html.lia-variant-dark .swiper-slide {
 
 /* Quote Dark Mode Overrides */
 html.lia-variant-dark .fhQuote,
-html.lia-variant-dark .lia-quote {
+html.lia-variant-dark .definition{
   color: var(--fh-color-white) !important;
   background: var(--fh-color-bg-dark) !important;
+}
+
+
+html.lia-variant-dark .lia-quote {
+  background: var(--fh-color-green-dark) !important;
+  color: var(--fh-color-white) !important;
+}
+
+html.lia-variant-dark .note,
+html.lia-variant-dark .summary {
+  color: var(--fh-color-white) !important;
+  background: #4d3b00 !important; 
 }
 
 html.lia-variant-dark .fhQuote::before,
@@ -393,7 +406,7 @@ html.lia-variant-dark figure.lia-figure video {
    ========================================= */
 /* 1. Make all text match your title font */
 body, .lia-slide, p, li, span, a, div {
-  font-family: system-ui, sans-serif !important;
+  font-family: system-ui, sans-serif, icon !important;
 }
 
 /* 2. Fluid scaling for Headings */
@@ -491,3 +504,4 @@ blockquote > *:last-child,
 .fhQuote::after {
   line-height: 0.5; 
 }
+
