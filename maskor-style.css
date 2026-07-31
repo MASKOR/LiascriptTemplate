@@ -301,6 +301,10 @@ html.lia-variant-dark .lia-effect__box {
   border: 1px solid var(--fh-color-border);
 }
 
+button.lia-table__sort {
+  display: none !important;
+}
+
 .lia-table th {
   background-color: var(--fh-color-green);
   color: var(--fh-color-bg-dark);
